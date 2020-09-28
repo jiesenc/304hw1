@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>regression on JC304</title>
+    <link>/tags/regression/</link>
+    <description>Recent content in regression on JC304</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Sep 2020 21:13:14 -0500</lastBuildDate><atom:link href="/tags/regression/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>covid interesting founding</title>
+      <link>/2020/09/27/covid-interesting-founding/</link>
+      <pubDate>Sun, 27 Sep 2020 21:13:14 -0500</pubDate>
+      
+      <guid>/2020/09/27/covid-interesting-founding/</guid>
+      <description>Abstract  Introduction  Dicuss  Code  library(opendatatoronto) library(dplyr) ## ## Attaching package: &amp;#39;dplyr&amp;#39; ## The following objects are masked from &amp;#39;package:stats&amp;#39;: ## ## filter, lag ## The following objects are masked from &amp;#39;package:base&amp;#39;: ## ## intersect, setdiff, setequal, union library(tidyverse) ## ── Attaching packages ──────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ── ## ✓ ggplot2 3.3.2 ✓ purrr 0.3.4 ## ✓ tibble 3.0.3 ✓ stringr 1.4.0 ## ✓ tidyr 1.1.2 ✓ forcats 0.</description>
+    </item>
+    
+  </channel>
+</rss>
