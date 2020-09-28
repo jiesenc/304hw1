@@ -1,7 +1,7 @@
 ---
 title: "covid interesting founding"
 author: "Jiesen cui"
-date: 2020-09-27T21:13:14-05:00
+date: 2020-09-20T21:13:14-05:00
 categories: ["R"]
 tags: ["Covid19", "plot"]
 ---
