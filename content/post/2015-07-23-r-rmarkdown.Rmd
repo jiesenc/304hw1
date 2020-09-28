@@ -100,4 +100,6 @@ Hadley Wickham, Romain François, Lionel Henry and Kirill Müller (2020). dplyr:
 
 https://open.toronto.ca/dataset/covid-19-cases-in-toronto/
 
+# Code also availible at Github
+https://github.com/jiesenc/304hw1
 
