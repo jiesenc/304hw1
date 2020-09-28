@@ -62,7 +62,7 @@
 
   <article class="article">
     
-    <span class="article-duration">4 min read</span>
+    <span class="article-duration">5 min read</span>
     
 
     <h1 class="article-title">covid interesting founding</h1>
@@ -77,9 +77,11 @@
 
 <div id="abstract" class="section level1">
 <h1>Abstract</h1>
+<p>Nowadays, we are facing a difficult time, because of COVID19. As a people who live in toronto, is really care about the covid19 cases in toronto. For covid 19, there maybe some interesting foundings based from statistical ways, this blog is to find the interesting part of age and source of infection of who was infected by COVID19 in toronto.</p>
 </div>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
+<p>I selected the COVID19 toronto cases dataset to analyze. For now we are under a special situation because of COVID19, and it is really important to know the trends of COVID19 confirmed cases and some other information about it, such as the age group, source of infection. In the dataset we are going to analyze, there are many variables, however we are going to discuss only a part of them. I select the age group stand for the patient’s age, source of infection stand for the reason why they got infected. As I found the people who is within the age group of 19-59 is the main group of people who got infected by COVID19, especially for people within 19-29. Also for the way they got infected, I found the way of closed contact and outbreak associated are the main ways they got infected. In this dataset, for outbreak related reason of getting infected by COVID19 is N/A, so maybe for those patients they do not really sure about why they got in infected, I think the reason should be close infected. Except of travel, institutional, healthcare reasons, the most possible reason should be close contact.</p>
 </div>
 <div id="dicuss" class="section level1">
 <h1>Dicuss</h1>
@@ -175,10 +177,6 @@ ggplot(data = covid, aes(x = `Age Group` )) + stat_count(color = &#39;grey&#39;,
 <p><img src="../../../../post/2015-07-23-r-rmarkdown_files/figure-html/code-1.png" width="672" /></p>
 <pre class="r"><code>ggplot(data = covid, aes(x = `Source of Infection`)) + stat_count(color = &#39;grey&#39;,fill = &#39;blue&#39;)</code></pre>
 <p><img src="../../../../post/2015-07-23-r-rmarkdown_files/figure-html/code-2.png" width="672" /></p>
-</div>
-<div id="including-plots" class="section level1">
-<h1>Including Plots</h1>
-<p>You can also embed plots. See Figure <a href="#fig:pie"><strong>??</strong></a> for example:</p>
 <pre><code></code></pre>
 </div>
 

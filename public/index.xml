@@ -6,23 +6,33 @@
     <description>Recent content on JC304</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Sep 2020 21:13:14 -0500</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Dec 2020 21:49:57 -0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>coming soon</title>
+      <link>/2020/12/30/coming-soon/</link>
+      <pubDate>Wed, 30 Dec 2020 21:49:57 -0700</pubDate>
+      
+      <guid>/2020/12/30/coming-soon/</guid>
+      <description>coming soon </description>
+    </item>
+    
     <item>
       <title>covid interesting founding</title>
       <link>/2020/09/27/covid-interesting-founding/</link>
       <pubDate>Sun, 27 Sep 2020 21:13:14 -0500</pubDate>
       
       <guid>/2020/09/27/covid-interesting-founding/</guid>
-      <description>Abstract  Introduction  Dicuss  Code  library(opendatatoronto) library(dplyr) ## ## Attaching package: &amp;#39;dplyr&amp;#39; ## The following objects are masked from &amp;#39;package:stats&amp;#39;: ## ## filter, lag ## The following objects are masked from &amp;#39;package:base&amp;#39;: ## ## intersect, setdiff, setequal, union library(tidyverse) ## ── Attaching packages ──────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ── ## ✓ ggplot2 3.3.2 ✓ purrr 0.3.4 ## ✓ tibble 3.0.3 ✓ stringr 1.4.0 ## ✓ tidyr 1.1.2 ✓ forcats 0.</description>
+      <description>Abstract Nowadays, we are facing a difficult time, because of COVID19. As a people who live in toronto, is really care about the covid19 cases in toronto. For covid 19, there maybe some interesting foundings based from statistical ways, this blog is to find the interesting part of age and source of infection of who was infected by COVID19 in toronto.
+ Introduction I selected the COVID19 toronto cases dataset to analyze.</description>
     </item>
     
     <item>
-      <title>covid interesting pose</title>
-      <link>/2016/12/30/covid-interesting-pose/</link>
-      <pubDate>Fri, 30 Dec 2016 21:49:57 -0700</pubDate>
+      <title>jason&#39;s web</title>
+      <link>/2020/01/01/jasons-web/</link>
+      <pubDate>Wed, 01 Jan 2020 13:09:13 -0600</pubDate>
       
-      <guid>/2016/12/30/covid-interesting-pose/</guid>
-      <description>Abstract Introduction Dicuss Code library(opendatatoronto) library(dplyr) library(tidyverse) # get package package &amp;lt;- show_package(&amp;quot;64b54586-6180-4485-83eb-81e8fae3b8fe&amp;quot;) package # get all resources for this package resources &amp;lt;- list_package_resources(&amp;quot;64b54586-6180-4485-83eb-81e8fae3b8fe&amp;quot;) # identify datastore resources; by default, Toronto Open Data sets datastore resource format to CSV for non-geospatial and GeoJSON for geospatial resources datastore_resources &amp;lt;- filter(resources, tolower(format) %in% c(&#39;csv&#39;, &#39;geojson&#39;)) # load the first datastore resource as a sample data &amp;lt;- filter(datastore_resources, row_number()==1) %&amp;gt;% get_resource() data covid = data %&amp;gt;% select(&amp;quot;Age Group&amp;quot;,&amp;quot;Reported Date&amp;quot;,&amp;quot;Source of Infection&amp;quot;) covid = covid %&amp;gt;% dplyr::filter(!</description>
+      <guid>/2020/01/01/jasons-web/</guid>
+      <description>Interesting foundings for 304 class</description>
     </item>
     
     <item>
@@ -32,15 +42,6 @@
       
       <guid>/about/</guid>
       <description>This is a &amp;ldquo;hello world&amp;rdquo; example website for the blogdown package. The theme was forked from @jrutheiser/hugo-lithium-theme and modified by Yihui Xie.</description>
-    </item>
-    
-    <item>
-      <title>Lorem Ipsum</title>
-      <link>/2015/01/01/lorem-ipsum/</link>
-      <pubDate>Thu, 01 Jan 2015 13:09:13 -0600</pubDate>
-      
-      <guid>/2015/01/01/lorem-ipsum/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
     </item>
     
   </channel>

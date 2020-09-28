@@ -3,7 +3,7 @@ title: "covid interesting founding"
 author: "Jiesen cui"
 date: 2020-09-27T21:13:14-05:00
 categories: ["R"]
-tags: ["R Markdown", "plot", "regression"]
+tags: ["Covid19", "plot"]
 ---
 
 ```{r setup, include=FALSE}
@@ -11,9 +11,10 @@ knitr::opts_chunk$set(collapse = TRUE)
 ```
 
 # Abstract
-
+Nowadays, we are facing a difficult time, because of COVID19. As a people who live in toronto, is really care about the covid19 cases in toronto. For covid 19, there maybe some interesting foundings based from statistical ways, this blog is to find the interesting part of age and source of infection of who was infected by COVID19 in toronto.
 
 # Introduction
+I selected the COVID19 toronto cases dataset to analyze. For now we are under a special situation because of COVID19, and it is really important to know the trends of COVID19 confirmed cases and some other information about it, such as the age group, source of infection. In the dataset we are going to analyze, there are many variables, however we are going to discuss only a part of them. I select the age group stand for the patient's age, source of infection stand for the reason why they got infected. As I found the people who is within the age group of 19-59 is the main group of people who got infected by COVID19, especially for people within 19-29. Also for the way they got infected, I found the way of closed contact and outbreak associated are the main ways they got infected. In this dataset, for outbreak related reason of getting infected by COVID19 is N/A, so maybe for those patients they do not really sure about why they got in infected, I think the reason should be close infected. Except of travel, institutional, healthcare reasons, the most possible reason should be close contact.
 
 
 # Dicuss
@@ -75,9 +76,6 @@ ggplot(data = covid, aes(x = `Source of Infection`)) + stat_count(color = 'grey'
 ```
 
 
-# Including Plots
-
-You can also embed plots. See Figure \@ref(fig:pie) for example:
 
 ``` 
 ```

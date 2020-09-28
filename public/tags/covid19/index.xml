@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on JC304</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on JC304</description>
+    <title>Covid19 on JC304</title>
+    <link>/tags/covid19/</link>
+    <description>Recent content in Covid19 on JC304</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Dec 2020 21:49:57 -0700</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>coming soon</title>
-      <link>/2020/12/30/coming-soon/</link>
-      <pubDate>Wed, 30 Dec 2020 21:49:57 -0700</pubDate>
-      
-      <guid>/2020/12/30/coming-soon/</guid>
-      <description>coming soon </description>
-    </item>
-    
+    <lastBuildDate>Sun, 27 Sep 2020 21:13:14 -0500</lastBuildDate><atom:link href="/tags/covid19/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>covid interesting founding</title>
       <link>/2020/09/27/covid-interesting-founding/</link>
@@ -24,15 +15,6 @@
       <guid>/2020/09/27/covid-interesting-founding/</guid>
       <description>Abstract Nowadays, we are facing a difficult time, because of COVID19. As a people who live in toronto, is really care about the covid19 cases in toronto. For covid 19, there maybe some interesting foundings based from statistical ways, this blog is to find the interesting part of age and source of infection of who was infected by COVID19 in toronto.
  Introduction I selected the COVID19 toronto cases dataset to analyze.</description>
-    </item>
-    
-    <item>
-      <title>jason&#39;s web</title>
-      <link>/2020/01/01/jasons-web/</link>
-      <pubDate>Wed, 01 Jan 2020 13:09:13 -0600</pubDate>
-      
-      <guid>/2020/01/01/jasons-web/</guid>
-      <description>Interesting foundings for 304 class</description>
     </item>
     
   </channel>
