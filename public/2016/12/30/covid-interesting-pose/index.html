@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.75.1" />
+
+
+<title>covid interesting pose - JC304</title>
+<meta property="og:title" content="covid interesting pose - JC304">
+
+
+  <link href='../../../../favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="../../../../css/fonts.css" media="all">
+<link rel="stylesheet" href="../../../../css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="../../../../" class="nav-logo">
+    <img src="../../../../images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="../../../../about/">About</a></li>
+    
+    <li><a href="https://github.com/rstudio/blogdown">GitHub</a></li>
+    
+    <li><a href="https://twitter.com/rstudio">Twitter</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">2 min read</span>
+    
+
+    <h1 class="article-title">covid interesting pose</h1>
+
+    
+    <span class="article-date">2016-12-30</span>
+    
+
+    <div class="article-content">
+      <h1 id="abstract">Abstract</h1>
+<h1 id="introduction">Introduction</h1>
+<h1 id="dicuss">Dicuss</h1>
+<h1 id="code">Code</h1>
+<pre><code class="language-{r" data-lang="{r">
+library(opendatatoronto)
+library(dplyr)
+library(tidyverse)
+# get package
+package &lt;- show_package(&quot;64b54586-6180-4485-83eb-81e8fae3b8fe&quot;)
+package
+
+# get all resources for this package
+resources &lt;- list_package_resources(&quot;64b54586-6180-4485-83eb-81e8fae3b8fe&quot;)
+
+# identify datastore resources; by default, Toronto Open Data sets datastore resource format to CSV for non-geospatial and GeoJSON for geospatial resources
+datastore_resources &lt;- filter(resources, tolower(format) %in% c('csv', 'geojson'))
+
+# load the first datastore resource as a sample
+data &lt;- filter(datastore_resources, row_number()==1) %&gt;% get_resource()
+data
+
+covid = data %&gt;%
+           select(&quot;Age Group&quot;,&quot;Reported Date&quot;,&quot;Source of Infection&quot;)
+covid = covid %&gt;% 
+  dplyr::filter(!is.na(`Age Group`))
+covid = covid %&gt;% 
+  dplyr::filter(!is.na(`Source of Infection`))
+
+covid$`Age Group` &lt;- ifelse(covid$`Age Group` == &quot;19 and younger&quot;,  10, covid$`Age Group`);
+covid$`Age Group` &lt;- ifelse(covid$`Age Group` == &quot;20 to 29 Years&quot;,  20, covid$`Age Group`);
+covid$`Age Group` &lt;- ifelse(covid$`Age Group` == &quot;30 to 39 Years&quot;,  30, covid$`Age Group`);  
+covid$`Age Group` &lt;- ifelse(covid$`Age Group` == &quot;40 to 49 Years&quot;,  40, covid$`Age Group`);  
+covid$`Age Group` &lt;- ifelse(covid$`Age Group` == &quot;50 to 59 Years&quot;,  50, covid$`Age Group`);  
+covid$`Age Group` &lt;- ifelse(covid$`Age Group` == &quot;60 to 69 Years&quot;,  60, covid$`Age Group`); 
+covid$`Age Group` &lt;- ifelse(covid$`Age Group` == &quot;70 to 79 Years&quot;,  70, covid$`Age Group`);  
+covid$`Age Group` &lt;- ifelse(covid$`Age Group` == &quot;80 to 89 Years&quot;,  80, covid$`Age Group`); 
+covid$`Age Group` &lt;- ifelse(covid$`Age Group` == &quot;90 and older&quot;,  90, covid$`Age Group`); 
+covid$`Age Group` &lt;- ifelse(covid$`Age Group` == &quot;NaN&quot;,  0, covid$`Age Group`); 
+
+covid$`Source of Infection` &lt;- ifelse(covid$`Source of Infection` == &quot;Travel&quot; , 0, covid$`Source of Infection`)
+covid$`Source of Infection` &lt;- ifelse(covid$`Source of Infection` ==  &quot;Close contact&quot;, 1, covid$`Source of Infection`)
+covid$`Source of Infection` &lt;- ifelse(covid$`Source of Infection` ==  &quot;Institutional&quot; , 2, covid$`Source of Infection`)
+covid$`Source of Infection` &lt;- ifelse(covid$`Source of Infection` ==  &quot;Healthcare&quot;  , 3, covid$`Source of Infection`)
+covid$`Source of Infection` &lt;- ifelse(covid$`Source of Infection` ==   &quot;Community&quot;    , 4, covid$`Source of Infection`)
+covid$`Source of Infection` &lt;- ifelse(covid$`Source of Infection` ==   &quot;N/A - Outbreak associated&quot;    , 5, covid$`Source of Infection`)
+covid$`Source of Infection` &lt;- ifelse(covid$`Source of Infection` ==    &quot;Unknown/Missing&quot;   , 6, covid$`Source of Infection`)
+covid$`Source of Infection` &lt;- ifelse(covid$`Source of Infection` ==     &quot;Pending&quot;   , 7, covid$`Source of Infection`)
+
+
+ggplot(data = covid, aes(x = `Age Group` )) + stat_count(color = 'grey',fill = 'pink')
+ggplot(data = covid, aes(x = `Source of Infection`)) + stat_count(color = 'grey',fill = 'blue')
+
+
+</code></pre><h1 id="including-plots">Including Plots</h1>
+<p>You can also embed plots. See Figure @ref(fig:pie) for example:</p>
+<pre><code></code></pre>
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="../../../../index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="../../../../images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+<script src="../../../../js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+

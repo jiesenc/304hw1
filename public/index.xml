@@ -17,13 +17,12 @@
     </item>
     
     <item>
-      <title>A Plain Markdown Post</title>
-      <link>/2016/12/30/a-plain-markdown-post/</link>
+      <title>covid interesting pose</title>
+      <link>/2016/12/30/covid-interesting-pose/</link>
       <pubDate>Fri, 30 Dec 2016 21:49:57 -0700</pubDate>
       
-      <guid>/2016/12/30/a-plain-markdown-post/</guid>
-      <description>This is a post written in plain Markdown (*.md) instead of R Markdown (*.Rmd). The major differences are:
- You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (```{r}); A plain Markdown post is rendered through Blackfriday, and an R Markdown document is compiled by rmarkdown and Pandoc.  There are many differences in syntax between Blackfriday&amp;rsquo;s Markdown and Pandoc&amp;rsquo;s Markdown.</description>
+      <guid>/2016/12/30/covid-interesting-pose/</guid>
+      <description>Abstract Introduction Dicuss Code library(opendatatoronto) library(dplyr) library(tidyverse) # get package package &amp;lt;- show_package(&amp;quot;64b54586-6180-4485-83eb-81e8fae3b8fe&amp;quot;) package # get all resources for this package resources &amp;lt;- list_package_resources(&amp;quot;64b54586-6180-4485-83eb-81e8fae3b8fe&amp;quot;) # identify datastore resources; by default, Toronto Open Data sets datastore resource format to CSV for non-geospatial and GeoJSON for geospatial resources datastore_resources &amp;lt;- filter(resources, tolower(format) %in% c(&#39;csv&#39;, &#39;geojson&#39;)) # load the first datastore resource as a sample data &amp;lt;- filter(datastore_resources, row_number()==1) %&amp;gt;% get_resource() data covid = data %&amp;gt;% select(&amp;quot;Age Group&amp;quot;,&amp;quot;Reported Date&amp;quot;,&amp;quot;Source of Infection&amp;quot;) covid = covid %&amp;gt;% dplyr::filter(!</description>
     </item>
     
     <item>
