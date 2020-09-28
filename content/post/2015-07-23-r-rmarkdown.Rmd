@@ -1,5 +1,5 @@
 ---
-title: "covid interesting founding"
+title: "Founding of COVID19 infected age and source"
 author: "Jiesen cui"
 date: 2020-09-20T21:13:14-05:00
 categories: ["R"]
@@ -9,15 +9,20 @@ tags: ["Covid19", "plot"]
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
 ```
+# Author
+Jiesen Cui
+
 
 # Abstract
-Nowadays, we are facing a difficult time, because of COVID19. As a people who live in toronto, is really care about the covid19 cases in toronto. For covid 19, there maybe some interesting foundings based from statistical ways, this blog is to find the interesting part of age and source of infection of who was infected by COVID19 in toronto.
+Nowadays, we are facing a difficult time, because of COVID19. It's important to know the most common age and source of infection of COVID19 so that we can try to avoid it. For the age group and most common way of getting infected of COVID19, we found it's 20-59 and close contact.
 
 # Introduction
 I selected the COVID19 toronto cases dataset to analyze. For now we are under a special situation because of COVID19, and it is really important to know the trends of COVID19 confirmed cases and some other information about it, such as the age group, source of infection. In the dataset we are going to analyze, there are many variables, however we are going to discuss only a part of them. I select the age group stand for the patient's age, source of infection stand for the reason why they got infected. As I found the people who is within the age group of 19-59 is the main group of people who got infected by COVID19, especially for people within 19-29. Also for the way they got infected, I found the way of closed contact and outbreak associated are the main ways they got infected. In this dataset, for outbreak related reason of getting infected by COVID19 is N/A, so maybe for those patients they do not really sure about why they got in infected, I think the reason should be close infected. Except of travel, institutional, healthcare reasons, the most possible reason should be close contact.
 
+# Data and Data discussion
+As we mentioned in the introduction part, we selected three variables, confirmed date, age group and source of infection. And we did some cleaning on the data. Firstly cleaned the rows we do not use, then cleaned the missing data. And from the dataset, we saw that some value of variables are hard to analyze by R, because it wrote on characters or other form. For processing the age group, I classified all age group and used the youngest age to represent the age group except "19 and under", for that group, I selected 10 to represent. And for source of infection, I selected 0-7 to represent all types of infection way. When I transferred all variables to numbers, so that it could dispaly a graph more clearly and process the data easier.
 
-# Dicuss
+
 
 
 # Code 
@@ -75,7 +80,24 @@ ggplot(data = covid, aes(x = `Source of Infection`)) + stat_count(color = 'grey'
 
 ```
 
+# Graph discussion
+For the graph producted by the code, the first graph age group and the cases for each age group. We can see it obviously, the "20-29" age group have most COVID19 cases in toronto, and age group for "70-79" and "90 and older" have less cases compared to other groups. And this graph show a trend of positive skewness. For the graph of source of infection, we can see from this graph is the number 1 which means close contact, and for 5 means N/A outbreak associated. We can assume that the most common way for toronto COVID19 patients is close contact. Fot the outbreak associated reason, we can assume the majority of this source is close contact.
+
+# Weakness and next step
+For this analysis, there are some weaknesses and there are also something can be done in the future. The weakness of this analysis is when processing the data, for source of infection, there are too many of NA outbreak associated data, which means for this group of people they have no idea on why they got infected. It occupies almost 6000 cases, we should divide this group data by percentage of other source. By doing this, we can get a more specific histogram to see the source of getting infected. For the next step, I want to think about the relationship of age group and source of infection. When I am doing the analysis, I was thinking is that possible that a specific age group of people may got infected by a specific way, because of their habits. For example we can assume, people in group age of 30-59 may get infected more by the way of close contact, because they need to go to work everyday and meet many people. And for age of 19-29, they may get infected by travel, because young people love to travel more and they have more free time. This is the work I may do for the next step.
+
+# Referrence
+Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686,
+  https://doi.org/10.21105/joss.01686
+  
+Yihui Xie (2020). blogdown: Create Blogs and Websites with R Markdown. R package version 0.20.
+
+  Yihui Xie, Alison Presmanes Hill, and Amber Thomas (2017). blogdown: Creating Websites with R
+  Markdown. Chapman and Hall/CRC. ISBN 978-0815363729
+  
+Hadley Wickham, Romain François, Lionel Henry and Kirill Müller (2020). dplyr: A Grammar of Data
+  Manipulation. https://dplyr.tidyverse.org, https://github.com/tidyverse/dplyr.
+
+https://open.toronto.ca/dataset/covid-19-cases-in-toronto/
 
 
-``` 
-```
